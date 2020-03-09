@@ -1,0 +1,6 @@
+place_left_side
+place_front_leg
+place_back_leg
+place_chair_top
+place_chair_bottom
+place_right_side
