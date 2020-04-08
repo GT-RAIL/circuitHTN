@@ -3,7 +3,7 @@ pickup_back_leg
 attach_back_leg
 pickup_front_leg
 attach_front_leg
-pcikup_chair_top
+pickup_chair_top
 attach_chair_top
 pickup_right_side
 place_right_side

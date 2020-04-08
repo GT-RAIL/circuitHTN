@@ -8,4 +8,4 @@ attach_front_leg
 pickup_left_side
 place_left_side
 pickup_chair_bottom
-attach_chair_bottom
+place_chair_bottom

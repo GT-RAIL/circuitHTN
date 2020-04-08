@@ -460,19 +460,20 @@ def calculate_all_results(demos, approach):
     # print(approach_dist)
     print(approach_dist[len(approach_dist) - 1], distance.jensenshannon(demo_dist, approach_dist), avg_length - avg_length_demo)
 
-if __name__=="__main__":
+if __name__=="__main__":    
     # actions = get_actions_from_demo('./50_salad_dataset/ann-ts/activityAnnotationsFilteredOrdered/25-1-activityAnnotation.txt')
     # final_state_action_pair, final_state = run_actions(actions)
     # print(final_state)
 
     in_file = open('demo_list.pkl', 'rb')
     demo_list = pickle.load(in_file)
+    print(demo_list)
 
-    for i in range(0, 99):
-        if i in [3, 12, 16, 18, 20, 24, 26, 27, 29, 32, 37, 41, 43, 44, 45, 48, 49, 52, 53, 56, 58, 59, 60, 62, 65, 66, 67, 69, 71, 72, 76, 77, 80, 81, 82, 84, 85, 86, 89, 91, 92, 95, 96, 97, 99]:
-            print('reduction failed for demo set:', i)
-            continue
-        final_salads_demo = calculate_all_results(demo_list[i], 'phtn')
+#    for i in range(0, 99):
+#        if i in [3, 12, 16, 18, 20, 24, 26, 27, 29, 32, 37, 41, 43, 44, 45, 48, 49, 52, 53, 56, 58, 59, 60, 62, 65, 66, 67, 69, 71, 72, 76, 77, 80, 81, 82, 84, 85, 86, 89, 91, 92, 95, 96, 97, 99]:
+#            print('reduction failed for demo set:', i)
+#            continue
+#        final_salads_demo = calculate_all_results(demo_list[i], 'phtn')
 
     # with open('check_demonstration.txt', 'w') as filehandle:
     #     for state_action in final_state_action_pair:
