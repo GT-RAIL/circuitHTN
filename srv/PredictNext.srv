@@ -1,0 +1,4 @@
+string[] prev_actions   # the full action history
+---
+string[] next_actions   # predicted next actions, from greatest to least probability
+float64[] action_probs  # prediction probabilities for next_actions

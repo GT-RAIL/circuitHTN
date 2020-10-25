@@ -1,0 +1,35 @@
+strict digraph  {
+node [ordering=out];
+"0 - init_action" [action=init_action];
+"11 - attach_shell1" [action=attach_shell1];
+"3 - screw1" [action=screw1];
+"4 - hold_for_robot1" [action=hold_for_robot1];
+"5 - grab_tools2" [action=grab_tools2];
+"6 - attach_shell2" [action=attach_shell2];
+"9 - term_action" [action=term_action];
+"14 - screw2" [action=screw2];
+"8 - hold_for_robot2" [action=hold_for_robot2];
+"13 - screw1" [action=screw1];
+"7 - screw2" [action=screw2];
+"2 - attach_shell1" [action=attach_shell1];
+"12 - attach_shell2" [action=attach_shell2];
+"1 - grab_tools1" [action=grab_tools1];
+"15 - hold_for_robot1" [action=hold_for_robot1];
+"10 - grab_tools2" [action=grab_tools2];
+"0 - init_action" -> "1 - grab_tools1"  [prob="1.0", state="(False, False, False, False, False, False, False, False, False, False)"];
+"11 - attach_shell1" -> "12 - attach_shell2"  [prob="0.5", state="(True, True, True, False, False, False, False, False, False, False)"];
+"3 - screw1" -> "4 - hold_for_robot1"  [prob="0.5", state="(True, False, True, False, True, False, False, False, False, False)"];
+"4 - hold_for_robot1" -> "5 - grab_tools2"  [prob="0.5", state="(True, False, True, False, True, False, True, False, True, False)"];
+"5 - grab_tools2" -> "6 - attach_shell2"  [prob="0.5", state="(True, True, True, False, True, False, True, False, True, False)"];
+"6 - attach_shell2" -> "7 - screw2"  [prob="0.5", state="(True, True, True, True, True, False, True, False, True, False)"];
+"14 - screw2" -> "15 - hold_for_robot1"  [prob="0.5", state="(True, True, True, True, True, True, False, False, False, False)"];
+"8 - hold_for_robot2" -> "9 - term_action"  [prob="1.0", state=term_state];
+"13 - screw1" -> "14 - screw2"  [prob="0.5", state="(True, True, True, True, True, False, False, False, False, False)"];
+"7 - screw2" -> "8 - hold_for_robot2"  [prob="0.5", state="(True, True, True, True, True, True, True, False, True, False)"];
+"2 - attach_shell1" -> "3 - screw1"  [prob="0.5", state="(True, False, True, False, False, False, False, False, False, False)"];
+"12 - attach_shell2" -> "13 - screw1"  [prob="0.5", state="(True, True, True, True, False, False, False, False, False, False)"];
+"1 - grab_tools1" -> "2 - attach_shell1"  [prob="0.5", state="(True, False, False, False, False, False, False, False, False, False)"];
+"1 - grab_tools1" -> "10 - grab_tools2"  [prob="0.5", state="(True, False, False, False, False, False, False, False, False, False)"];
+"15 - hold_for_robot1" -> "8 - hold_for_robot2"  [prob="0.5", state="(True, True, True, True, True, True, True, False, True, False)"];
+"10 - grab_tools2" -> "11 - attach_shell1"  [prob="0.5", state="(True, True, False, False, False, False, False, False, False, False)"];
+}

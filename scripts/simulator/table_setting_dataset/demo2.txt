@@ -1,0 +1,17 @@
+pickup_plate
+place_plate
+pickup_knife
+place_knife
+pickup_spoon
+place_spoon
+pickup_orange
+place_orange
+pickup_banana
+place_banana
+pickup_cup
+place_cup
+pickup_cube
+place_cube
+pickup_bottle
+pour_water
+place_bottle

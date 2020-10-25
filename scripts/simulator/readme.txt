@@ -1,0 +1,1 @@
+Simulator and data for the 50 salads dataset and table setting evaluation.  Not included (both due to space, and because it's not pertinent to the approach), is the RLBench simulator with environments and actions for the table setting evaluation scenario.
